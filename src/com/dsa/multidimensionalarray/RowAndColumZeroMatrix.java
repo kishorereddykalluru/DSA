@@ -9,9 +9,9 @@ public class RowAndColumZeroMatrix {
                           {0, 1, 0, 1},
                           {1, 1, 1, 1}};
 
-        rowAndColumnZeroMatrixBruteForce(matrix);
+        //rowAndColumnZeroMatrixBruteForce(matrix);
         rowAndColumnZeroMatrixOptimized(matrix);
-        rowAndColumnZeroMatrixSpaceOptimized(matrix);
+        //rowAndColumnZeroMatrixSpaceOptimized(matrix);
 
     }
 
