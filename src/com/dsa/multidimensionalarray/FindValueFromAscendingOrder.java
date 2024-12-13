@@ -8,28 +8,27 @@ public class FindValueFromAscendingOrder {
                 {27, 29, 37, 48},
                 {32, 33, 39, 50}};
 
-        System.out.println(findElement(matrix, 29));
+        System.out.println(findElement(matrix, 48));
 
     }
 
-    private static boolean findElement(int[][] matrix, int element) {
+    public static String findElement(int[][] matrx, int value) {
 
         int i = 0;
-        int j = matrix[0].length - 1;
+        int j = matrx[0].length-1;
 
-        while(i < matrix.length && j >= 0) {
-            if(matrix[i][j] == element) {
-                return true;
-            }
+        while(i < matrx.length-1 && j >= 0) {
 
-            if(matrix[i][j] > element) {
+            if(matrx[i][j] == value)
+                return "Element found at " + i +" and " + j;
+            else if(matrx[i][j] > value) {
                 j--;
-            } else {
+            } else if(matrx[i][j] < value) {
                 i++;
             }
         }
 
-        return false;
+        return "Element not found";
     }
 
 }
