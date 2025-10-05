@@ -25,14 +25,14 @@ public class FindMiddleElement {
 
     private static LinkedList.Node findMiddleElement(LinkedList.Node head) {
 
-       LinkedList.Node slow = head;
-       LinkedList.Node fast = head;
+        LinkedList.Node fast = head;
+        LinkedList.Node slow = head;
 
-       while(fast!=null && fast.next != null) {
-           fast = fast.next.next;
-           slow = slow.next;
-       }
+        while(fast.next!=null && fast.next.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
 
-       return slow;
+        return slow;
     }
 }

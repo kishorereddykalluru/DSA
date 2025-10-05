@@ -11,7 +11,7 @@ public class ReverseLinkedList {
         list.insert(2);
         list.insert(3);
         list.insert(4);
-        list.insert(5);
+        //list.insert(5);
 
         list.display();
 
@@ -24,14 +24,17 @@ public class ReverseLinkedList {
 
     private static LinkedList.Node reverseLinkedList(LinkedList.Node head) {
 
-        LinkedList.Node cur = head;
+        if(head == null || head.next == null)
+            return head;
+
+        LinkedList.Node current = head;
         LinkedList.Node prev = null;
 
-        while(cur!=null) {
-            LinkedList.Node temp = cur.next;
-            cur.next = prev;
-            prev = cur;
-            cur = temp;
+        while(current != null) {
+            LinkedList.Node temp = current.next;
+            current.next = prev;
+            prev = current;
+            current = temp;
         }
 
         return prev;

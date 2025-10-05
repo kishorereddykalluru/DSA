@@ -1,23 +1,29 @@
 package com.dsa.stack;
 
+import java.util.Stack;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Stack stack = new Stack(4);
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
+        Stack<Integer> s = new Stack<>();
 
-        System.out.println(stack.peek());
-        System.out.println(stack.peek());
-        System.out.println(stack.peek());
+        s.add(10);
+        s.add(20);
+        s.add(30);
+        s.add(40);
+        s.add(50);
+        s.add(60);
 
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
+        Integer peek = s.peek();
+        for(Integer value: s) {
+            System.out.println(value);
+        }
+        System.out.println("----------------------");
+        System.out.println(peek);
+        System.out.println("----------------------");
+        for(Integer value: s) {
+            System.out.println(value);
+        }
     }
 }
