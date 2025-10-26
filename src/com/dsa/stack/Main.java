@@ -16,14 +16,14 @@ public class Main {
         s.add(60);
 
         Integer peek = s.peek();
-        for(Integer value: s) {
-            System.out.println(value);
-        }
+
         System.out.println("----------------------");
         System.out.println(peek);
         System.out.println("----------------------");
-        for(Integer value: s) {
-            System.out.println(value);
-        }
+        System.out.println(s.pop());
+
+        System.out.println(s.peek());
+
+        System.out.println();
     }
 }
